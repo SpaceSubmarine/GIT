@@ -1,4 +1,4 @@
-# For 
+# For Update Local Repo
 
 cd directorio-del-repositorio-local/
 git status
@@ -6,3 +6,45 @@ git fetch
 git merge origin/main
 git status
 git push
+
+
+# Verifying email and credentials in Git
+
+# To view the email configured in Git in your local repository, 
+# use the following command:
+$ git config user.email
+
+# This will display the email you have configured for Git.
+
+# To verify the credentials configured in Git in your local 
+# repository, use the following command:
+$ git config credential.helper
+
+# This will display the type of credential helper you have 
+# configured. Depending on the helper you use, you can view the 
+# credentials using different commands.
+
+# For example, if you use Git's credential caching helper, you can 
+# view the cached credentials using the following command:
+$ git credential-cache get
+
+# This will display the cached credentials, including the username 
+# and access token.
+
+# If you do not remember the credentials you have configured, you can 
+# reset them by following these steps:
+
+# 1. Change the email configured in Git:
+$ git config --global user.email "your_email@example.com"
+
+# This command changes the email configured in Git to 
+# your_email@example.com.
+
+# 2. Remove the cached credentials:
+$ git credential-cache erase
+
+# This command removes the cached credentials on your system.
+
+# After resetting the credentials, you will need to log in again to 
+# the remote repository the next time you perform an operation that 
+# requires authentication.
