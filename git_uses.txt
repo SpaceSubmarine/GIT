@@ -1,0 +1,8 @@
+# For 
+
+cd directorio-del-repositorio-local/
+git status
+git fetch
+git merge origin/main
+git status
+git push
