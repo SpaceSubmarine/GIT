@@ -1,5 +1,7 @@
 # For Update Local Repo
+git pull
 
+# 
 cd directorio-del-repositorio-local/
 git status
 git fetch
