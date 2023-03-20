@@ -1,3 +1,4 @@
+###########################################
 # For Update Local Repo
 git pull
 
@@ -15,8 +16,29 @@ git add .
 git commit -m"confirmation"
 git push --set-upstream origin master
 
-# Verifying email and credentials in Git
+###########################################
+#You can define credentials for a specific repository instead of globally using the git credential command along with the store option and the --file option.
+#Here are the steps to do it:
+#Open the terminal and navigate to the repository in question.
+#Run the following command to define the credential storage file for that repository:
 
+git config credential.helper 'store --file ~/.git-credentials-repo'
+
+#This command will set the credential storage file to ~/.git-credentials-repo.
+#Next, run the following command to save the repository's credentials to the storage file:
+
+git credential approve
+
+#When you run this command, Git will prompt you for your Github credentials. After you enter them, Git will store them in the file you just defined.
+#Finally, verify that your credentials are stored correctly in the file by running the following command:
+
+cat ~/.git-credentials-repo
+
+#This command will display the credentials stored in the credential storage file.
+#Now, when you perform operations on the repository, Git will use the credentials stored in the credential storage file to authenticate your operations.
+###########################################
+
+# Verifying email and credentials in Git
 # To view the email configured in Git in your local repository, 
 # use the following command:
 $ git config user.email
